@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<!-- saved from url=(0146)https://gensparkpublicblob.blob.core.windows.net/user-upload-image/page/toolu_013heWVDSn7FZWbsMjHQE22x/anesfrickeapp_complicaciones_completas.html -->
+<html lang="es"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anesfrickeapp - Sistema Clínico Hospital Gustavo Fricke</title>
+    <link href="./Anesfrickeapp - Sistema Clínico Hospital Gustavo Fricke_files/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./Anesfrickeapp - Sistema Clínico Hospital Gustavo Fricke_files/all.min.css">
+    <style>
+        .eva-slider {
+            -webkit-appearance: none;
+            appearance: none;
+            height: 8px;
+            border-radius: 4px;
+            background: linear-gradient(to right, #10b981 0%, #f59e0b 50%, #ef4444 100%);
+            outline: none;
+        }
+        .eva-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #1f2937;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .eva-slider::-moz-range-thumb {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: #1f2937;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .patient-card {
+            transition: all 0.3s ease;
+        }
+        .patient-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        .complication-item {
+            transition: all 0.2s ease;
+        }
+        .complication-item:hover {
+            background-color: #f3f4f6;
+        }
+         {
+            .no-print { display: none !important; }
+            body { font-size: 12px; }
+            .patient-card { break-inside: avoid; }
+        }
+    </style>
+<style>
+    .genspark-notice-dialog {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .genspark-notice-content {
+      background-color: white;
+      border-radius: 8px;
+      max-width: 600px;
+      width: 90%;
+      box-sizing: border-box;
+      padding: 10px 30px 30px 30px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+    }
+
+    .genspark-notice-title {
+      color: #000;
+      font-family: Arial;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+    }
+
+    .genspark-notice-list {
+      margin: 24px 0;
+      
+      color: #606366;
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      padding-left: 12px;
+    }
+
+    .genspark-notice-list li {
+      margin-bottom: 12px;
+      list-style-type: disc;
+    }
+
+    .genspark-notice-list li a {
+      color: #606366;
+      text-decoration: underline;
+    }
+
+    .genspark-notice-checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+      gap: 10px;
+
+      color: #232425;
+
+      font-family: Arial;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+
+    .genspark-notice-actions {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+      
+    .genspark-notice-ok {
+      color: #232425;
+
+      text-align: center;
+      font-family: Arial;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 150%; 
+
+      cursor: pointer;
+      display: flex;
+      height: 40px;
+      padding: 6px 14px;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 8px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      width: 100%;
+    }
+  </style><link rel="stylesheet" href="chrome-extension://paodpkkacimmkacaecjmhdncjgjepcai/content-static.css"></head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-900 text-white shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-hospital text-2xl"></i>
+                    <div>
+                        <h1 class="text-xl font-bold">Anesfrickeapp</h1>
+                        <p class="text-blue-200 text-sm">Hospital Gustavo Fricke - Departamento de Anestesiología</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button onclick="exportData()" class="bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                        <i class="fas fa-file-excel mr-2"></i>Exportar Excel
+                    </button>
+                    <button onclick="toggleFilters()" class="bg-gray-600 hover:bg-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                        <i class="fas fa-filter mr-2"></i>Filtros
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filter Panel -->
+    <div id="filterPanel" class="bg-white border-b border-gray-200 shadow-sm hidden">
+        <div class="container mx-auto px-4 py-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <select id="filterMedico" class="border border-gray-300 rounded-lg px-3 py-2 text-sm"><option value="">Todos los médicos</option><option value="Médico Genérico (Nuevo)">Médico Genérico (Nuevo)</option><option value="Alba Flechas Valderrama">Alba Flechas Valderrama</option><option value="Alejandro Jeldres Donoso">Alejandro Jeldres Donoso</option><option value="Andrea Pérez Guzmán">Andrea Pérez Guzmán</option><option value="Astrid Köhler Campos">Astrid Köhler Campos</option><option value="Camila Torres Carter">Camila Torres Carter</option><option value="Carlos Prado Kittel">Carlos Prado Kittel</option><option value="Carola Aravena Arancibia">Carola Aravena Arancibia</option><option value="Cristian Rojas Tolosa">Cristian Rojas Tolosa</option><option value="Cristopher Araya González">Cristopher Araya González</option><option value="Daniela Zagal Caviedes">Daniela Zagal Caviedes</option><option value="Diego Márquez Montecinos">Diego Márquez Montecinos</option><option value="Diego López Alarcón">Diego López Alarcón</option><option value="Eduardo Oyaneder Opazo">Eduardo Oyaneder Opazo</option><option value="Fernando Aranda Gutiérrez">Fernando Aranda Gutiérrez</option><option value="Héctor Cid Sepúlveda">Héctor Cid Sepúlveda</option><option value="Hugo Velasco Orozco">Hugo Velasco Orozco</option><option value="Johnny Yáñez Pizarro">Johnny Yáñez Pizarro</option><option value="Luis Coronado Andia">Luis Coronado Andia</option><option value="Martín Venegas Araya">Martín Venegas Araya</option><option value="Margarita Mena González">Margarita Mena González</option><option value="Marisel Fabianovich Beltrami">Marisel Fabianovich Beltrami</option><option value="Mauricio Castillo Videla">Mauricio Castillo Videla</option><option value="Nelson Muente Escobar">Nelson Muente Escobar</option><option value="Olaya Vicencio Salazar">Olaya Vicencio Salazar</option><option value="Pablo Gysling Merino">Pablo Gysling Merino</option><option value="Pablo Carrasco Escaff">Pablo Carrasco Escaff</option><option value="Paola Vidal Díaz">Paola Vidal Díaz</option><option value="Raúl Faúndez Olmos">Raúl Faúndez Olmos</option><option value="Richard Stuart Tannen">Richard Stuart Tannen</option><option value="Rodrigo Retamal Reyes">Rodrigo Retamal Reyes</option><option value="Sebastián Otero Cavada">Sebastián Otero Cavada</option><option value="Sebastián Córdova Vargas">Sebastián Córdova Vargas</option><option value="Natalia González Serey">Natalia González Serey</option><option value="Ángela Parra Palma">Ángela Parra Palma</option><option value="María de los Ángeles Oñate Prieto">María de los Ángeles Oñate Prieto</option><option value="Benjamín Marín Espinoza">Benjamín Marín Espinoza</option><option value="Felipe Rojas Reyes">Felipe Rojas Reyes</option><option value="Ximena Meza Guzmán">Ximena Meza Guzmán</option><option value="Diego Lastra Tapia">Diego Lastra Tapia</option><option value="Estefanía Matus Urrea">Estefanía Matus Urrea</option><option value="Felipe Cárcamo Parra">Felipe Cárcamo Parra</option><option value="Leonardo Marín Carcey">Leonardo Marín Carcey</option><option value="Jovan Lagos González">Jovan Lagos González</option><option value="Rodrigo Salazar Martín">Rodrigo Salazar Martín</option><option value="César Sáez Morales">César Sáez Morales</option></select>
+                <select id="filterUnidad" class="border border-gray-300 rounded-lg px-3 py-2 text-sm">
+                    <option value="">Todas las unidades</option>
+                    <option value="UCI">UCI</option>
+                    <option value="UPC">UPC</option>
+                    <option value="UPC Ped">UPC Ped</option>
+                    <option value="Pediatría">Pediatría</option>
+                    <option value="Gine">Gine</option>
+                    <option value="MQ">MQ</option>
+                    <option value="Urgencia">Urgencia</option>
+                </select>
+                <select id="filterEstado" class="border border-gray-300 rounded-lg px-3 py-2 text-sm">
+                    <option value="">Todos los estados</option>
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="En seguimiento">En seguimiento</option>
+                    <option value="Finalizado">Finalizado</option>
+                </select>
+                <button onclick="applyFilters()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                    Aplicar Filtros
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6">
+        <!-- Dashboard -->
+        <div id="dashboard" class="space-y-6">
+            <!-- Statistics Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">Catéteres Peridurales</p>
+                            <p class="text-3xl font-bold text-blue-600" id="periduralCount">0</p>
+                        </div>
+                        <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-syringe text-blue-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">Catéteres CVC</p>
+                            <p class="text-3xl font-bold text-green-600" id="cvcCount">0</p>
+                        </div>
+                        <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-tint text-green-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">Interconsultas</p>
+                            <p class="text-3xl font-bold text-purple-600" id="interconsultaCount">0</p>
+                        </div>
+                        <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-user-md text-purple-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-sm font-medium text-gray-600">Alertas</p>
+                            <p class="text-3xl font-bold text-red-600" id="alertCount">0</p>
+                        </div>
+                        <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-exclamation-triangle text-red-600 text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Actions -->
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <h3 class="text-lg font-semibold text-gray-900 mb-4">Acciones Rápidas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <button onclick="showModule(&#39;peridural&#39;)" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        <i class="fas fa-syringe mr-2"></i>Catéteres Peridurales
+                    </button>
+                    <button onclick="showModule(&#39;cvc&#39;)" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        <i class="fas fa-tint mr-2"></i>Catéteres CVC
+                    </button>
+                    <button onclick="showModule(&#39;interconsulta&#39;)" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                        <i class="fas fa-user-md mr-2"></i>Interconsultas
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modules -->
+        <div id="periduralModule" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <button onclick="showDashboard()" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </button>
+                    <h2 class="text-2xl font-bold text-gray-900">
+                        <i class="fas fa-syringe text-blue-600 mr-2"></i>Catéteres Peridurales
+                    </h2>
+                </div>
+                <button onclick="showAddPatientForm(&#39;peridural&#39;)" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fas fa-plus mr-2"></i>Agregar Paciente
+                </button>
+            </div>
+            <div id="periduralPatients" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+
+        <div id="cvcModule" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <button onclick="showDashboard()" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </button>
+                    <h2 class="text-2xl font-bold text-gray-900">
+                        <i class="fas fa-tint text-green-600 mr-2"></i>Catéteres CVC
+                    </h2>
+                </div>
+                <button onclick="showAddPatientForm(&#39;cvc&#39;)" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fas fa-plus mr-2"></i>Agregar Paciente
+                </button>
+            </div>
+            <div id="cvcPatients" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+
+        <div id="interconsultaModule" class="hidden space-y-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <button onclick="showDashboard()" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-arrow-left text-xl"></i>
+                    </button>
+                    <h2 class="text-2xl font-bold text-gray-900">
+                        <i class="fas fa-user-md text-purple-600 mr-2"></i>Interconsultas Médicas
+                    </h2>
+                </div>
+                <button onclick="showAddPatientForm(&#39;interconsulta&#39;)" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition-colors">
+                    <i class="fas fa-plus mr-2"></i>Agregar Paciente
+                </button>
+            </div>
+            <div id="interconsultaPatients" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+        </div>
+
+        <!-- Add/Edit Patient Form -->
+        <div id="patientForm" class="hidden">
+            <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-xl font-semibold text-gray-900" id="formTitle">Agregar Paciente</h3>
+                    <button onclick="hidePatientForm()" class="text-gray-600 hover:text-gray-900">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                
+                <form id="patientFormData" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Basic Information -->
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nombre del Paciente *</label>
+                            <input type="text" id="patientName" class="w-full border border-gray-300 rounded-lg px-3 py-2" required="">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Diagnóstico</label>
+                            <input type="text" id="patientDiagnosis" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Médico Responsable *</label>
+                            <select id="patientMedico" class="w-full border border-gray-300 rounded-lg px-3 py-2" required=""><option value="">Seleccionar médico</option><option value="Médico Genérico (Nuevo)">Médico Genérico (Nuevo)</option><option value="Alba Flechas Valderrama">Alba Flechas Valderrama</option><option value="Alejandro Jeldres Donoso">Alejandro Jeldres Donoso</option><option value="Andrea Pérez Guzmán">Andrea Pérez Guzmán</option><option value="Astrid Köhler Campos">Astrid Köhler Campos</option><option value="Camila Torres Carter">Camila Torres Carter</option><option value="Carlos Prado Kittel">Carlos Prado Kittel</option><option value="Carola Aravena Arancibia">Carola Aravena Arancibia</option><option value="Cristian Rojas Tolosa">Cristian Rojas Tolosa</option><option value="Cristopher Araya González">Cristopher Araya González</option><option value="Daniela Zagal Caviedes">Daniela Zagal Caviedes</option><option value="Diego Márquez Montecinos">Diego Márquez Montecinos</option><option value="Diego López Alarcón">Diego López Alarcón</option><option value="Eduardo Oyaneder Opazo">Eduardo Oyaneder Opazo</option><option value="Fernando Aranda Gutiérrez">Fernando Aranda Gutiérrez</option><option value="Héctor Cid Sepúlveda">Héctor Cid Sepúlveda</option><option value="Hugo Velasco Orozco">Hugo Velasco Orozco</option><option value="Johnny Yáñez Pizarro">Johnny Yáñez Pizarro</option><option value="Luis Coronado Andia">Luis Coronado Andia</option><option value="Martín Venegas Araya">Martín Venegas Araya</option><option value="Margarita Mena González">Margarita Mena González</option><option value="Marisel Fabianovich Beltrami">Marisel Fabianovich Beltrami</option><option value="Mauricio Castillo Videla">Mauricio Castillo Videla</option><option value="Nelson Muente Escobar">Nelson Muente Escobar</option><option value="Olaya Vicencio Salazar">Olaya Vicencio Salazar</option><option value="Pablo Gysling Merino">Pablo Gysling Merino</option><option value="Pablo Carrasco Escaff">Pablo Carrasco Escaff</option><option value="Paola Vidal Díaz">Paola Vidal Díaz</option><option value="Raúl Faúndez Olmos">Raúl Faúndez Olmos</option><option value="Richard Stuart Tannen">Richard Stuart Tannen</option><option value="Rodrigo Retamal Reyes">Rodrigo Retamal Reyes</option><option value="Sebastián Otero Cavada">Sebastián Otero Cavada</option><option value="Sebastián Córdova Vargas">Sebastián Córdova Vargas</option><option value="Natalia González Serey">Natalia González Serey</option><option value="Ángela Parra Palma">Ángela Parra Palma</option><option value="María de los Ángeles Oñate Prieto">María de los Ángeles Oñate Prieto</option><option value="Benjamín Marín Espinoza">Benjamín Marín Espinoza</option><option value="Felipe Rojas Reyes">Felipe Rojas Reyes</option><option value="Ximena Meza Guzmán">Ximena Meza Guzmán</option><option value="Diego Lastra Tapia">Diego Lastra Tapia</option><option value="Estefanía Matus Urrea">Estefanía Matus Urrea</option><option value="Felipe Cárcamo Parra">Felipe Cárcamo Parra</option><option value="Leonardo Marín Carcey">Leonardo Marín Carcey</option><option value="Jovan Lagos González">Jovan Lagos González</option><option value="Rodrigo Salazar Martín">Rodrigo Salazar Martín</option><option value="César Sáez Morales">César Sáez Morales</option></select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Unidad *</label>
+                            <select id="patientUnidad" class="w-full border border-gray-300 rounded-lg px-3 py-2" required="">
+                                <option value="">Seleccionar unidad</option>
+                                <option value="UCI">UCI</option>
+                                <option value="UPC">UPC</option>
+                                <option value="UPC Ped">UPC Ped</option>
+                                <option value="Pediatría">Pediatría</option>
+                                <option value="Gine">Gine</option>
+                                <option value="MQ">MQ</option>
+                                <option value="Urgencia">Urgencia</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Estado</label>
+                            <select id="patientEstado" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                <option value="Pendiente">Pendiente</option>
+                                <option value="En seguimiento">En seguimiento</option>
+                                <option value="Finalizado">Finalizado</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Fecha de Instalación</label>
+                            <input type="date" id="patientFechaInstalacion" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                        </div>
+                    </div>
+
+                    <!-- Specific Fields -->
+                    <div id="periduralFields" class="hidden space-y-6">
+                        <h4 class="text-lg font-medium text-blue-600 border-b border-blue-200 pb-2">Catéter Peridural - Información Específica</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Motivo de Colocación</label>
+                                <input type="text" id="periduralMotivo" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Nivel de Inserción</label>
+                                <select id="periduralNivel" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                    <option value="">Seleccionar nivel</option>
+                                    <option value="T12-L1">T12-L1</option>
+                                    <option value="L1-L2">L1-L2</option>
+                                    <option value="L2-L3">L2-L3</option>
+                                    <option value="L3-L4">L3-L4</option>
+                                    <option value="L4-L5">L4-L5</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Anestésico Utilizado</label>
+                                <select id="periduralAnestesico" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                    <option value="">Seleccionar anestésico</option>
+                                    <option value="Bupivacaína 0.125%">Bupivacaína 0.125%</option>
+                                    <option value="Bupivacaína 0.25%">Bupivacaína 0.25%</option>
+                                    <option value="Bupivacaína 0.5%">Bupivacaína 0.5%</option>
+                                    <option value="Lidocaína 1%">Lidocaína 1%</option>
+                                    <option value="Lidocaína 2%">Lidocaína 2%</option>
+                                    <option value="Ropivacaína 0.2%">Ropivacaína 0.2%</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">EVA Actual: <span id="evaValue">5</span></label>
+                                <input type="range" id="periduralEva" class="eva-slider w-full" min="0" max="10" value="5" oninput="document.getElementById(&#39;evaValue&#39;).textContent = this.value">
+                            </div>
+                        </div>
+
+                        <!-- Peridural Complications -->
+                        <div>
+                            <h5 class="text-md font-medium text-gray-700 mb-3">Complicaciones</h5>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Cefalea post-punción" class="rounded">
+                                    <span class="text-sm">Cefalea post-punción</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Hematoma peridural" class="rounded">
+                                    <span class="text-sm">Hematoma peridural</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Infección local" class="rounded">
+                                    <span class="text-sm">Infección local</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Punción dural accidental" class="rounded">
+                                    <span class="text-sm">Punción dural accidental</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Migración del catéter" class="rounded">
+                                    <span class="text-sm">Migración del catéter</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Bloqueo motor inadecuado" class="rounded">
+                                    <span class="text-sm">Bloqueo motor inadecuado</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Hipotensión" class="rounded">
+                                    <span class="text-sm">Hipotensión</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Prurito" class="rounded">
+                                    <span class="text-sm">Prurito</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Retención urinaria" class="rounded">
+                                    <span class="text-sm">Retención urinaria</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="periduralComplicaciones" value="Falla técnica" class="rounded">
+                                    <span class="text-sm">Falla técnica</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="cvcFields" class="hidden space-y-6">
+                        <h4 class="text-lg font-medium text-green-600 border-b border-green-200 pb-2">Catéter CVC - Información Específica</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Sitio de Inserción</label>
+                                <select id="cvcSitio" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                    <option value="">Seleccionar sitio</option>
+                                    <option value="Yugular interna derecha">Yugular interna derecha</option>
+                                    <option value="Yugular interna izquierda">Yugular interna izquierda</option>
+                                    <option value="Subclavia derecha">Subclavia derecha</option>
+                                    <option value="Subclavia izquierda">Subclavia izquierda</option>
+                                    <option value="Femoral derecha">Femoral derecha</option>
+                                    <option value="Femoral izquierda">Femoral izquierda</option>
+                                    <option value="PICC">PICC</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Número de Lúmenes</label>
+                                <select id="cvcLumenes" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                    <option value="1">1 lumen</option>
+                                    <option value="2">2 lúmenes</option>
+                                    <option value="3">3 lúmenes</option>
+                                    <option value="4">4 lúmenes</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Técnica</label>
+                                <select id="cvcTecnica" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                    <option value="">Seleccionar técnica</option>
+                                    <option value="Seldinger">Seldinger</option>
+                                    <option value="Ecoguiada">Ecoguiada</option>
+                                    <option value="Puntos anatómicos">Puntos anatómicos</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Calibre</label>
+                                <select id="cvcCalibre" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                    <option value="">Seleccionar calibre</option>
+                                    <option value="7Fr">7Fr</option>
+                                    <option value="8Fr">8Fr</option>
+                                    <option value="9Fr">9Fr</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- CVC Complications -->
+                        <div>
+                            <h5 class="text-md font-medium text-gray-700 mb-3">Complicaciones</h5>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Neumotórax" class="rounded">
+                                    <span class="text-sm">Neumotórax</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Hemotórax" class="rounded">
+                                    <span class="text-sm">Hemotórax</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Punción arterial" class="rounded">
+                                    <span class="text-sm">Punción arterial</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Hematoma local" class="rounded">
+                                    <span class="text-sm">Hematoma local</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Infección local" class="rounded">
+                                    <span class="text-sm">Infección local</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Bacteriemia relacionada" class="rounded">
+                                    <span class="text-sm">Bacteriemia relacionada</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Trombosis venosa" class="rounded">
+                                    <span class="text-sm">Trombosis venosa</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Malposición" class="rounded">
+                                    <span class="text-sm">Malposición</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Embolismo aéreo" class="rounded">
+                                    <span class="text-sm">Embolismo aéreo</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="cvcComplicaciones" value="Lesión pleural" class="rounded">
+                                    <span class="text-sm">Lesión pleural</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="interconsultaFields" class="hidden space-y-6">
+                        <h4 class="text-lg font-medium text-purple-600 border-b border-purple-200 pb-2">Interconsulta - Información Específica</h4>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Especialidad Solicitada</label>
+                                <select id="interconsultaEspecialidad" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                    <option value="">Seleccionar especialidad</option>
+                                    <option value="Cardiología">Cardiología</option>
+                                    <option value="Neurología">Neurología</option>
+                                    <option value="Traumatología">Traumatología</option>
+                                    <option value="Medicina Interna">Medicina Interna</option>
+                                    <option value="Cirugía">Cirugía</option>
+                                    <option value="Psiquiatría">Psiquiatría</option>
+                                    <option value="Infectología">Infectología</option>
+                                    <option value="Nefrología">Nefrología</option>
+                                    <option value="Endocrinología">Endocrinología</option>
+                                    <option value="Otra">Otra</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Médico Solicitante</label>
+                                <select id="interconsultaSolicitante" class="w-full border border-gray-300 rounded-lg px-3 py-2"><option value="">Seleccionar médico</option><option value="Médico Genérico (Nuevo)">Médico Genérico (Nuevo)</option><option value="Alba Flechas Valderrama">Alba Flechas Valderrama</option><option value="Alejandro Jeldres Donoso">Alejandro Jeldres Donoso</option><option value="Andrea Pérez Guzmán">Andrea Pérez Guzmán</option><option value="Astrid Köhler Campos">Astrid Köhler Campos</option><option value="Camila Torres Carter">Camila Torres Carter</option><option value="Carlos Prado Kittel">Carlos Prado Kittel</option><option value="Carola Aravena Arancibia">Carola Aravena Arancibia</option><option value="Cristian Rojas Tolosa">Cristian Rojas Tolosa</option><option value="Cristopher Araya González">Cristopher Araya González</option><option value="Daniela Zagal Caviedes">Daniela Zagal Caviedes</option><option value="Diego Márquez Montecinos">Diego Márquez Montecinos</option><option value="Diego López Alarcón">Diego López Alarcón</option><option value="Eduardo Oyaneder Opazo">Eduardo Oyaneder Opazo</option><option value="Fernando Aranda Gutiérrez">Fernando Aranda Gutiérrez</option><option value="Héctor Cid Sepúlveda">Héctor Cid Sepúlveda</option><option value="Hugo Velasco Orozco">Hugo Velasco Orozco</option><option value="Johnny Yáñez Pizarro">Johnny Yáñez Pizarro</option><option value="Luis Coronado Andia">Luis Coronado Andia</option><option value="Martín Venegas Araya">Martín Venegas Araya</option><option value="Margarita Mena González">Margarita Mena González</option><option value="Marisel Fabianovich Beltrami">Marisel Fabianovich Beltrami</option><option value="Mauricio Castillo Videla">Mauricio Castillo Videla</option><option value="Nelson Muente Escobar">Nelson Muente Escobar</option><option value="Olaya Vicencio Salazar">Olaya Vicencio Salazar</option><option value="Pablo Gysling Merino">Pablo Gysling Merino</option><option value="Pablo Carrasco Escaff">Pablo Carrasco Escaff</option><option value="Paola Vidal Díaz">Paola Vidal Díaz</option><option value="Raúl Faúndez Olmos">Raúl Faúndez Olmos</option><option value="Richard Stuart Tannen">Richard Stuart Tannen</option><option value="Rodrigo Retamal Reyes">Rodrigo Retamal Reyes</option><option value="Sebastián Otero Cavada">Sebastián Otero Cavada</option><option value="Sebastián Córdova Vargas">Sebastián Córdova Vargas</option><option value="Natalia González Serey">Natalia González Serey</option><option value="Ángela Parra Palma">Ángela Parra Palma</option><option value="María de los Ángeles Oñate Prieto">María de los Ángeles Oñate Prieto</option><option value="Benjamín Marín Espinoza">Benjamín Marín Espinoza</option><option value="Felipe Rojas Reyes">Felipe Rojas Reyes</option><option value="Ximena Meza Guzmán">Ximena Meza Guzmán</option><option value="Diego Lastra Tapia">Diego Lastra Tapia</option><option value="Estefanía Matus Urrea">Estefanía Matus Urrea</option><option value="Felipe Cárcamo Parra">Felipe Cárcamo Parra</option><option value="Leonardo Marín Carcey">Leonardo Marín Carcey</option><option value="Jovan Lagos González">Jovan Lagos González</option><option value="Rodrigo Salazar Martín">Rodrigo Salazar Martín</option><option value="César Sáez Morales">César Sáez Morales</option></select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Prioridad</label>
+                                <select id="interconsultaPrioridad" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                                    <option value="Normal">Normal</option>
+                                    <option value="Preferente">Preferente</option>
+                                    <option value="Urgente">Urgente</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Fecha de Evaluación</label>
+                                <input type="date" id="interconsultaFechaEvaluacion" class="w-full border border-gray-300 rounded-lg px-3 py-2">
+                            </div>
+                        </div>
+
+                        <!-- Interconsulta Management -->
+                        <div>
+                            <h5 class="text-md font-medium text-gray-700 mb-3">Manejo y Seguimiento</h5>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="interconsultaManejo" value="Evaluación realizada" class="rounded">
+                                    <span class="text-sm">Evaluación realizada</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="interconsultaManejo" value="Conducta médica definida" class="rounded">
+                                    <span class="text-sm">Conducta médica definida</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="interconsultaManejo" value="Tratamiento iniciado" class="rounded">
+                                    <span class="text-sm">Tratamiento iniciado</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="interconsultaManejo" value="Seguimiento programado" class="rounded">
+                                    <span class="text-sm">Seguimiento programado</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="interconsultaManejo" value="Alta de especialidad" class="rounded">
+                                    <span class="text-sm">Alta de especialidad</span>
+                                </label>
+                                <label class="complication-item flex items-center space-x-2 p-2 rounded cursor-pointer">
+                                    <input type="checkbox" name="interconsultaManejo" value="Derivación a otra especialidad" class="rounded">
+                                    <span class="text-sm">Derivación a otra especialidad</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Observations -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Observaciones Clínicas</label>
+                        <textarea id="patientObservaciones" class="w-full border border-gray-300 rounded-lg px-3 py-2 h-24" placeholder="Observaciones adicionales, evolución, notas clínicas..."></textarea>
+                    </div>
+
+                    <!-- Form Actions -->
+                    <div class="flex justify-end space-x-4">
+                        <button type="button" onclick="hidePatientForm()" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                            Cancelar
+                        </button>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors">
+                            <i class="fas fa-save mr-2"></i>Guardar Paciente
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Navigation -->
+    <nav class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2">
+        <div class="flex justify-around">
+            <button onclick="showDashboard()" class="flex flex-col items-center py-2 px-3 text-gray-600 hover:text-blue-600 transition-colors">
+                <i class="fas fa-home text-xl mb-1"></i>
+                <span class="text-xs">Dashboard</span>
+            </button>
+            <button onclick="showModule(&#39;peridural&#39;)" class="flex flex-col items-center py-2 px-3 text-gray-600 hover:text-blue-600 transition-colors">
+                <i class="fas fa-syringe text-xl mb-1"></i>
+                <span class="text-xs">Peridurales</span>
+            </button>
+            <button onclick="showModule(&#39;cvc&#39;)" class="flex flex-col items-center py-2 px-3 text-gray-600 hover:text-green-600 transition-colors">
+                <i class="fas fa-tint text-xl mb-1"></i>
+                <span class="text-xs">CVC</span>
+            </button>
+            <button onclick="showModule(&#39;interconsulta&#39;)" class="flex flex-col items-center py-2 px-3 text-gray-600 hover:text-purple-600 transition-colors">
+                <i class="fas fa-user-md text-xl mb-1"></i>
+                <span class="text-xs">Interconsultas</span>
+            </button>
+        </div>
+    </nav>
+
+    <script>
+        // Global variables
+        let patients = [];
+        let currentModule = 'dashboard';
+        let editingPatientId = null;
+
+        // List of doctors (44 anesthesiologists without Marcelo Donoso)
+        const doctors = [
+            "Médico Genérico (Nuevo)",
+            "Alba Flechas Valderrama",
+            "Alejandro Jeldres Donoso", 
+            "Andrea Pérez Guzmán",
+            "Astrid Köhler Campos",
+            "Camila Torres Carter",
+            "Carlos Prado Kittel",
+            "Carola Aravena Arancibia",
+            "Cristian Rojas Tolosa",
+            "Cristopher Araya González",
+            "Daniela Zagal Caviedes",
+            "Diego Márquez Montecinos",
+            "Diego López Alarcón",
+            "Eduardo Oyaneder Opazo",
+            "Fernando Aranda Gutiérrez",
+            "Héctor Cid Sepúlveda",
+            "Hugo Velasco Orozco",
+            "Johnny Yáñez Pizarro",
+            "Luis Coronado Andia",
+            "Martín Venegas Araya",
+            "Margarita Mena González",
+            "Marisel Fabianovich Beltrami",
+            "Mauricio Castillo Videla",
+            "Nelson Muente Escobar",
+            "Olaya Vicencio Salazar",
+            "Pablo Gysling Merino",
+            "Pablo Carrasco Escaff",
+            "Paola Vidal Díaz",
+            "Raúl Faúndez Olmos",
+            "Richard Stuart Tannen",
+            "Rodrigo Retamal Reyes",
+            "Sebastián Otero Cavada",
+            "Sebastián Córdova Vargas",
+            "Natalia González Serey",
+            "Ángela Parra Palma",
+            "María de los Ángeles Oñate Prieto",
+            "Benjamín Marín Espinoza",
+            "Felipe Rojas Reyes",
+            "Ximena Meza Guzmán",
+            "Diego Lastra Tapia",
+            "Estefanía Matus Urrea",
+            "Felipe Cárcamo Parra",
+            "Leonardo Marín Carcey",
+            "Jovan Lagos González",
+            "Rodrigo Salazar Martín",
+            "César Sáez Morales"
+        ];
+
+        // Initialize app
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPatients();
+            populateDoctorDropdowns();
+            updateDashboard();
+            setupFormSubmission();
+        });
+
+        // Populate doctor dropdowns
+        function populateDoctorDropdowns() {
+            const dropdowns = ['patientMedico', 'interconsultaSolicitante', 'filterMedico'];
+            dropdowns.forEach(id => {
+                const select = document.getElementById(id);
+                if (select) {
+                    select.innerHTML = id === 'filterMedico' ? '<option value="">Todos los médicos</option>' : '<option value="">Seleccionar médico</option>';
+                    doctors.forEach(doctor => {
+                        const option = document.createElement('option');
+                        option.value = doctor;
+                        option.textContent = doctor;
+                        select.appendChild(option);
+                    });
+                }
+            });
+        }
+
+        // Load patients from localStorage
+        function loadPatients() {
+            const stored = localStorage.getItem('anesfrickeapp_patients');
+            if (stored) {
+                patients = JSON.parse(stored);
+            }
+        }
+
+        // Save patients to localStorage
+        function savePatients() {
+            localStorage.setItem('anesfrickeapp_patients', JSON.stringify(patients));
+        }
+
+        // Update dashboard statistics
+        function updateDashboard() {
+            const periduralCount = patients.filter(p => p.type === 'peridural').length;
+            const cvcCount = patients.filter(p => p.type === 'cvc').length;
+            const interconsultaCount = patients.filter(p => p.type === 'interconsulta').length;
+            const alertCount = patients.filter(p => {
+                const daysSince = Math.floor((new Date() - new Date(p.fechaInstalacion)) / (1000 * 60 * 60 * 24));
+                return (p.type === 'peridural' && daysSince > 4) || 
+                       (p.type === 'cvc' && daysSince > 5) || 
+                       (p.type === 'interconsulta' && daysSince > 3);
+            }).length;
+
+            document.getElementById('periduralCount').textContent = periduralCount;
+            document.getElementById('cvcCount').textContent = cvcCount;
+            document.getElementById('interconsultaCount').textContent = interconsultaCount;
+            document.getElementById('alertCount').textContent = alertCount;
+        }
+
+        // Show/hide modules
+        function showDashboard() {
+            hideAllModules();
+            document.getElementById('dashboard').classList.remove('hidden');
+            currentModule = 'dashboard';
+            updateDashboard();
+        }
+
+        function showModule(type) {
+            hideAllModules();
+            document.getElementById(type + 'Module').classList.remove('hidden');
+            currentModule = type;
+            renderPatients(type);
+        }
+
+        function hideAllModules() {
+            const modules = ['dashboard', 'periduralModule', 'cvcModule', 'interconsultaModule', 'patientForm'];
+            modules.forEach(module => {
+                document.getElementById(module).classList.add('hidden');
+            });
+        }
+
+        // Patient form functions
+        function showAddPatientForm(type) {
+            editingPatientId = null;
+            document.getElementById('formTitle').textContent = 'Agregar Paciente';
+            document.getElementById('patientForm').classList.remove('hidden');
+            
+            // Hide all specific fields first
+            document.getElementById('periduralFields').classList.add('hidden');
+            document.getElementById('cvcFields').classList.add('hidden');
+            document.getElementById('interconsultaFields').classList.add('hidden');
+            
+            // Show specific fields for this type
+            document.getElementById(type + 'Fields').classList.remove('hidden');
+            
+            // Reset form
+            document.getElementById('patientFormData').reset();
+            
+            // Set default date to today
+            document.getElementById('patientFechaInstalacion').value = new Date().toISOString().split('T')[0];
+        }
+
+        function hidePatientForm() {
+            document.getElementById('patientForm').classList.add('hidden');
+        }
+
+        function editPatient(id) {
+            const patient = patients.find(p => p.id === id);
+            if (!patient) return;
+
+            editingPatientId = id;
+            document.getElementById('formTitle').textContent = 'Editar Paciente';
+            document.getElementById('patientForm').classList.remove('hidden');
+
+            // Hide all specific fields first
+            document.getElementById('periduralFields').classList.add('hidden');
+            document.getElementById('cvcFields').classList.add('hidden');
+            document.getElementById('interconsultaFields').classList.add('hidden');
+            
+            // Show specific fields for this type
+            document.getElementById(patient.type + 'Fields').classList.remove('hidden');
+
+            // Populate form with patient data
+            document.getElementById('patientName').value = patient.name || '';
+            document.getElementById('patientDiagnosis').value = patient.diagnosis || '';
+            document.getElementById('patientMedico').value = patient.medico || '';
+            document.getElementById('patientUnidad').value = patient.unidad || '';
+            document.getElementById('patientEstado').value = patient.estado || 'Pendiente';
+            document.getElementById('patientFechaInstalacion').value = patient.fechaInstalacion || '';
+            document.getElementById('patientObservaciones').value = patient.observaciones || '';
+
+            // Populate type-specific fields
+            if (patient.type === 'peridural') {
+                document.getElementById('periduralMotivo').value = patient.motivo || '';
+                document.getElementById('periduralNivel').value = patient.nivel || '';
+                document.getElementById('periduralAnestesico').value = patient.anestesico || '';
+                document.getElementById('periduralEva').value = patient.eva || 5;
+                document.getElementById('evaValue').textContent = patient.eva || 5;
+                
+                // Set complications
+                if (patient.complicaciones) {
+                    patient.complicaciones.forEach(comp => {
+                        const checkbox = document.querySelector(`input[name="periduralComplicaciones"][value="${comp}"]`);
+                        if (checkbox) checkbox.checked = true;
+                    });
+                }
+            } else if (patient.type === 'cvc') {
+                document.getElementById('cvcSitio').value = patient.sitio || '';
+                document.getElementById('cvcLumenes').value = patient.lumenes || '1';
+                document.getElementById('cvcTecnica').value = patient.tecnica || '';
+                document.getElementById('cvcCalibre').value = patient.calibre || '';
+                
+                // Set complications
+                if (patient.complicaciones) {
+                    patient.complicaciones.forEach(comp => {
+                        const checkbox = document.querySelector(`input[name="cvcComplicaciones"][value="${comp}"]`);
+                        if (checkbox) checkbox.checked = true;
+                    });
+                }
+            } else if (patient.type === 'interconsulta') {
+                document.getElementById('interconsultaEspecialidad').value = patient.especialidad || '';
+                document.getElementById('interconsultaSolicitante').value = patient.solicitante || '';
+                document.getElementById('interconsultaPrioridad').value = patient.prioridad || 'Normal';
+                document.getElementById('interconsultaFechaEvaluacion').value = patient.fechaEvaluacion || '';
+                
+                // Set management items
+                if (patient.manejo) {
+                    patient.manejo.forEach(item => {
+                        const checkbox = document.querySelector(`input[name="interconsultaManejo"][value="${item}"]`);
+                        if (checkbox) checkbox.checked = true;
+                    });
+                }
+            }
+        }
+
+        // Setup form submission
+        function setupFormSubmission() {
+            document.getElementById('patientFormData').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(e.target);
+                const patient = {
+                    id: editingPatientId || Date.now().toString(),
+                    name: formData.get('patientName') || document.getElementById('patientName').value,
+                    diagnosis: document.getElementById('patientDiagnosis').value,
+                    medico: document.getElementById('patientMedico').value,
+                    unidad: document.getElementById('patientUnidad').value,
+                    estado: document.getElementById('patientEstado').value,
+                    fechaInstalacion: document.getElementById('patientFechaInstalacion').value,
+                    observaciones: document.getElementById('patientObservaciones').value,
+                    createdAt: editingPatientId ? patients.find(p => p.id === editingPatientId).createdAt : new Date().toISOString(),
+                    updatedAt: new Date().toISOString()
+                };
+
+                // Determine type based on which fields are visible
+                if (!document.getElementById('periduralFields').classList.contains('hidden')) {
+                    patient.type = 'peridural';
+                    patient.motivo = document.getElementById('periduralMotivo').value;
+                    patient.nivel = document.getElementById('periduralNivel').value;
+                    patient.anestesico = document.getElementById('periduralAnestesico').value;
+                    patient.eva = document.getElementById('periduralEva').value;
+                    patient.complicaciones = Array.from(document.querySelectorAll('input[name="periduralComplicaciones"]:checked')).map(cb => cb.value);
+                } else if (!document.getElementById('cvcFields').classList.contains('hidden')) {
+                    patient.type = 'cvc';
+                    patient.sitio = document.getElementById('cvcSitio').value;
+                    patient.lumenes = document.getElementById('cvcLumenes').value;
+                    patient.tecnica = document.getElementById('cvcTecnica').value;
+                    patient.calibre = document.getElementById('cvcCalibre').value;
+                    patient.complicaciones = Array.from(document.querySelectorAll('input[name="cvcComplicaciones"]:checked')).map(cb => cb.value);
+                } else if (!document.getElementById('interconsultaFields').classList.contains('hidden')) {
+                    patient.type = 'interconsulta';
+                    patient.especialidad = document.getElementById('interconsultaEspecialidad').value;
+                    patient.solicitante = document.getElementById('interconsultaSolicitante').value;
+                    patient.prioridad = document.getElementById('interconsultaPrioridad').value;
+                    patient.fechaEvaluacion = document.getElementById('interconsultaFechaEvaluacion').value;
+                    patient.manejo = Array.from(document.querySelectorAll('input[name="interconsultaManejo"]:checked')).map(cb => cb.value);
+                }
+
+                // Validate required fields
+                if (!patient.name || !patient.medico || !patient.unidad) {
+                    alert('Por favor complete los campos obligatorios: Nombre, Médico Responsable y Unidad');
+                    return;
+                }
+
+                // Save patient
+                if (editingPatientId) {
+                    const index = patients.findIndex(p => p.id === editingPatientId);
+                    if (index !== -1) {
+                        patients[index] = patient;
+                    }
+                } else {
+                    patients.push(patient);
+                }
+
+                savePatients();
+                hidePatientForm();
+                
+                // Show success message
+                showSuccessMessage('Paciente guardado exitosamente');
+                
+                // Return to module view
+                if (currentModule !== 'dashboard') {
+                    renderPatients(patient.type);
+                }
+                updateDashboard();
+            });
+        }
+
+        // Show success message
+        function showSuccessMessage(message) {
+            const div = document.createElement('div');
+            div.className = 'fixed top-4 right-4 bg-green-500 text-white px-6 py-3 rounded-lg shadow-lg z-50';
+            div.innerHTML = `<i class="fas fa-check mr-2"></i>${message}`;
+            document.body.appendChild(div);
+            
+            setTimeout(() => {
+                div.remove();
+            }, 3000);
+        }
+
+        // Render patients for a specific type
+        function renderPatients(type) {
+            const container = document.getElementById(type + 'Patients');
+            const filteredPatients = patients.filter(p => p.type === type);
+            
+            if (filteredPatients.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <i class="fas fa-inbox text-gray-400 text-4xl mb-4"></i>
+                        <p class="text-gray-500">No hay pacientes registrados</p>
+                        <button onclick="showAddPatientForm('${type}')" class="mt-4 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg">
+                            Agregar Primer Paciente
+                        </button>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = filteredPatients.map(patient => {
+                const daysSince = Math.floor((new Date() - new Date(patient.fechaInstalacion)) / (1000 * 60 * 60 * 24));
+                const alertClass = getAlertClass(patient.type, daysSince);
+                const statusBadge = getStatusBadge(patient.estado);
+                
+                return `
+                    <div class="patient-card bg-white rounded-xl shadow-sm border border-gray-200 p-6 ${alertClass}">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="font-semibold text-gray-900 text-lg">${patient.name}</h4>
+                            ${statusBadge}
+                        </div>
+                        
+                        <div class="space-y-2 text-sm">
+                            <p><span class="font-medium">Diagnóstico:</span> ${patient.diagnosis || 'No especificado'}</p>
+                            <p><span class="font-medium">Médico:</span> ${patient.medico}</p>
+                            <p><span class="font-medium">Unidad:</span> ${patient.unidad}</p>
+                            <p><span class="font-medium">Días transcurridos:</span> ${daysSince}</p>
+                            
+                            ${patient.type === 'peridural' ? `
+                                <p><span class="font-medium">EVA:</span> <span class="font-bold text-lg ${getEvaColor(patient.eva)}">${patient.eva || 'N/A'}/10</span></p>
+                                <p><span class="font-medium">Nivel:</span> ${patient.nivel || 'No especificado'}</p>
+                            ` : ''}
+                            
+                            ${patient.type === 'cvc' ? `
+                                <p><span class="font-medium">Sitio:</span> ${patient.sitio || 'No especificado'}</p>
+                                <p><span class="font-medium">Lúmenes:</span> ${patient.lumenes || 'No especificado'}</p>
+                            ` : ''}
+                            
+                            ${patient.type === 'interconsulta' ? `
+                                <p><span class="font-medium">Especialidad:</span> ${patient.especialidad || 'No especificado'}</p>
+                                <p><span class="font-medium">Prioridad:</span> ${patient.prioridad || 'Normal'}</p>
+                            ` : ''}
+                            
+                            ${patient.complicaciones && patient.complicaciones.length > 0 ? `
+                                <div class="mt-3">
+                                    <p class="font-medium text-red-600">Complicaciones:</p>
+                                    <div class="mt-1">
+                                        ${patient.complicaciones.map(comp => `<span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded mr-1 mb-1">${comp}</span>`).join('')}
+                                    </div>
+                                </div>
+                            ` : ''}
+                        </div>
+                        
+                        <div class="mt-4 flex justify-end space-x-2">
+                            <button onclick="editPatient('${patient.id}')" class="text-blue-600 hover:text-blue-800 font-medium text-sm">
+                                <i class="fas fa-edit mr-1"></i>Editar
+                            </button>
+                            <button onclick="deletePatient('${patient.id}')" class="text-red-600 hover:text-red-800 font-medium text-sm">
+                                <i class="fas fa-trash mr-1"></i>Eliminar
+                            </button>
+                        </div>
+                        
+                        <div class="mt-2 text-xs text-gray-500">
+                            Actualizado: ${new Date(patient.updatedAt).toLocaleDateString()}
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Helper functions
+        function getAlertClass(type, days) {
+            if ((type === 'peridural' && days > 4) || 
+                (type === 'cvc' && days > 5) || 
+                (type === 'interconsulta' && days > 3)) {
+                return 'border-red-300 bg-red-50';
+            }
+            return '';
+        }
+
+        function getStatusBadge(estado) {
+            const badges = {
+                'Pendiente': 'bg-yellow-100 text-yellow-800',
+                'En seguimiento': 'bg-blue-100 text-blue-800',
+                'Finalizado': 'bg-green-100 text-green-800'
+            };
+            
+            return `<span class="px-2 py-1 text-xs font-medium rounded-full ${badges[estado] || 'bg-gray-100 text-gray-800'}">${estado}</span>`;
+        }
+
+        function getEvaColor(eva) {
+            const score = parseInt(eva);
+            if (score <= 3) return 'text-green-600';
+            if (score <= 6) return 'text-yellow-600';
+            return 'text-red-600';
+        }
+
+        // Delete patient
+        function deletePatient(id) {
+            if (confirm('¿Está seguro de que desea eliminar este paciente?')) {
+                patients = patients.filter(p => p.id !== id);
+                savePatients();
+                
+                if (currentModule !== 'dashboard') {
+                    renderPatients(currentModule);
+                }
+                updateDashboard();
+                showSuccessMessage('Paciente eliminado exitosamente');
+            }
+        }
+
+        // Filter functions
+        function toggleFilters() {
+            const panel = document.getElementById('filterPanel');
+            panel.classList.toggle('hidden');
+        }
+
+        function applyFilters() {
+            // This would filter the current view based on selected criteria
+            const medico = document.getElementById('filterMedico').value;
+            const unidad = document.getElementById('filterUnidad').value;
+            const estado = document.getElementById('filterEstado').value;
+            
+            // Filter and re-render current module
+            if (currentModule !== 'dashboard') {
+                renderPatients(currentModule);
+            }
+        }
+
+        // Export to Excel
+        function exportData() {
+            const finalizados = patients.filter(p => p.estado === 'Finalizado');
+            
+            if (finalizados.length === 0) {
+                alert('No hay pacientes finalizados para exportar');
+                return;
+            }
+            
+            // Create CSV content
+            let csvContent = "Tipo,Nombre,Diagnóstico,Médico,Unidad,Estado,Fecha Instalación,Complicaciones,Observaciones\n";
+            
+            finalizados.forEach(patient => {
+                const complicaciones = patient.complicaciones ? patient.complicaciones.join('; ') : '';
+                const row = [
+                    patient.type,
+                    patient.name,
+                    patient.diagnosis || '',
+                    patient.medico,
+                    patient.unidad,
+                    patient.estado,
+                    patient.fechaInstalacion || '',
+                    complicaciones,
+                    patient.observaciones || ''
+                ].map(field => `"${field}"`).join(',');
+                
+                csvContent += row + "\n";
+            });
+            
+            // Download file
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = `casos_finalizados_${new Date().toISOString().split('T')[0]}.csv`;
+            link.click();
+            
+            // Ask if want to delete exported patients
+            if (confirm(`Se exportaron ${finalizados.length} pacientes finalizados. ¿Desea eliminarlos de la aplicación para mantenerla limpia?`)) {
+                patients = patients.filter(p => p.estado !== 'Finalizado');
+                savePatients();
+                
+                if (currentModule !== 'dashboard') {
+                    renderPatients(currentModule);
+                }
+                updateDashboard();
+                showSuccessMessage('Pacientes finalizados eliminados exitosamente');
+            }
+        }
+    </script>
+
+
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDkTK0tzr2i2tUqdIPfx2fRnzWqD4er9Smwq7HOAnn%2BKFfIlR8LOrLygWbm7F7KjdW0CA3iYtJ2M5%2FPI8qlibGzGTUFWhbgZ5Q2YcSAlmTMWfSz91YiYcck25S1rOW643NeOXdR6e4p3MKrjDqjvK8m0K83VXS6aWOJ8jzNJ3dJDbW9QjEtFfv%2BjyfE%2FcNYXjVb7iygc8KQ6qB6PLfVh50dUOXRtRpbcCyGaVW3XrbGr1DVqeReFrIn%2F7Xk%2BoCHAwFBK15e7lMY4tmsNjwq52FD0FI88PFc2a6mV61A5ebWdhhoGiU9FI%2F6bQ39ENFhyJ0eZ0TwyzqVCBVKCQ%2B5UODQU4XyUFgkyUxM%2Fs7%2BrIQa4PGZfD2sWZhzOdKFJsnMInmosTaMFEoygi%2BaYAYLgp555%2BQArfqDlqmxPZS6sw%2FKGAM3BeSFkc0o6HreMd0r3Wv66XUfaJL1tnP%2BcBO30LsKwClidNNsfelRjE9OmGJ906HnpHPujGtiIUdvTVYj0lnXQ7O84eOiFboHW52iAB6fo%3D";
+        window.__genspark_locale = "es-ES";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDkTK0tzr2i2tUqdIPfx2fRnzWqD4er9Smwq7HOAnn+KFfIlR8LOrLygWbm7F7KjdW0CA3iYtJ2M5/PI8qlibGzGTUFWhbgZ5Q2YcSAlmTMWfSz91YiYcck25S1rOW643NeOXdR6e4p3MKrjDqjvK8m0K83VXS6aWOJ8jzNJ3dJDbW9QjEtFfv+jyfE/cNYXjVb7iygc8KQ6qB6PLfVh50dUOXRtRpbcCyGaVW3XrbGr1DVqeReFrIn/7Xk+oCHAwFBK15e7lMY4tmsNjwq52FD0FI88PFc2a6mV61A5ebWdhhoGiU9FI/6bQ39ENFhyJ0eZ0TwyzqVCBVKCQ+5UODQU4XyUFgkyUxM/s7+rIQa4PGZfD2sWZhzOdKFJsnMInmosTaMFEoygi+aYAYLgp555+QArfqDlqmxPZS6sw/KGAM3BeSFkc0o6HreMd0r3Wv66XUfaJL1tnP+cBO30LsKwClidNNsfelRjE9OmGJ906HnpHPujGtiIUdvTVYj0lnXQ7O84eOiFboHW52iAB6fo=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="./Anesfrickeapp - Sistema Clínico Hospital Gustavo Fricke_files/notice_dialog.js"></script>
+    </body></html>
